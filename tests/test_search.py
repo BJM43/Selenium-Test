@@ -11,8 +11,8 @@ class TestSearch(BaseTest):
         self.page = SearchPage(self.driver, self.wait)
         self.page.go_to_search_page()
 
-    def test_title(self, load_pages):
-        self.page.check_title("DuckDuckGo — La privacidad, simplificada.")
+    def test_login_fail(self, load_pages):
+        self.page.make_a_login_fail("20186927", "20186927")
 
-    def test_search(self, load_pages):
-        self.page.make_a_search("Selenium")
+    def test_login_pass(self, load_pages):
+        self.page.make_a_login_pass("20186927", "Https192630@")
