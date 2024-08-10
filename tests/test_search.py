@@ -12,7 +12,7 @@ class TestSearch(BaseTest):
         self.page.go_to_search_page()
 
     def test_login_fail(self, load_pages):
-        self.page.make_a_login_fail("20186927", "20186927")
+        self.page.make_a_login_fail("fakeuser@itla.edu.do", "20186927")
 
     def test_login_pass(self, load_pages):
-        self.page.make_a_login_pass("20186927", "Https192630@")
+        self.page.make_a_login_pass("20060211@itla.edu.do", "123456")
